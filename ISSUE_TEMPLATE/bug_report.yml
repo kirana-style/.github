@@ -1,0 +1,33 @@
+name: Bug report
+description: Something compiles, renders or reports wrongly.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: The smallest code that shows it — a style, a component, a repository link.
+      render: tsx
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of `npx kirana doctor --json`
+      description: Versions, engine, framework and bundler, in one paste.
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics or errors
+      description: The compiler's messages, with their codes (`KRN…`), if any.
+      render: shell
